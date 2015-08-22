@@ -232,7 +232,7 @@ class Meta
         $value = $value ?: $this->metas[$key];
         $tag = '<meta '.$name.'="'.$key.'" content="'.$value.'" />';
 
-        return $tag . '\n';
+        return $tag . "\n";
     }
 
     /**
