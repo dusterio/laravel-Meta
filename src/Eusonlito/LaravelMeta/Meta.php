@@ -232,11 +232,7 @@ class Meta
         $value = $value ?: $this->metas[$key];
         $tag = '<meta '.$name.'="'.$key.'" content="'.$value.'" />';
 
-        if ((strpos($key, 'og:') !== 0) && in_array($key, $this->og, true)) {
-            $tag .= $this->tagString('property', 'og:'.$key, $value);
-        }
-
-        return $tag;
+        return $tag . '\n';
     }
 
     /**
